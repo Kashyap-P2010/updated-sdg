@@ -41,14 +41,14 @@ p {
 
 #center-img {
   position: absolute;
-  width: 50px; /* Adjust size as needed */
-  height: 50px;
+  width: 120px;
+  height: 120px;
 }
 
 .orbit {
   position: absolute;
-  width: calc(var(--orbit) * 150px); /* Adjusted size */
-  height: calc(var(--orbit) * 150px); /* Adjusted size */
+  width: calc(var(--orbit) * 200px); /* Increased size */
+  height: calc(var(--orbit) * 200px); /* Increased size */
   border: 1px dashed white;
   border-radius: 50%;
   animation: rotate calc(var(--orbit) * 20s) linear infinite;
@@ -58,9 +58,9 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80px; /* Adjust size as needed */
-  height: 80px;
-  transform: rotate(var(--angle)) translateX(calc(var(--orbit) * 75px)) rotate(calc(-1 * var(--angle)));
+  width: 0px; /* Size of the image container */
+  height: 0px;
+  transform: rotate(var(--angle)) translateX(calc(var(--orbit) * 100px)) rotate(calc(-1 * var(--angle))); /* Increased distance */
   transform-origin: center center;
   animation: orbit calc(var(--orbit) * 20s) linear infinite;
 }
@@ -69,6 +69,9 @@ p {
   width: 80px; /* Adjust size as needed */
   height: 80px;
   border-radius: 30%;
+  position: absolute;
+  top: -40px; /* Half of the image height to center */
+  left: -40px; /* Half of the image width to center */
   transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
